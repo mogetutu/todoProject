@@ -91,7 +91,7 @@ class TodoController extends \BaseController {
 	public function destroy($id)
 	{
 		$todo = Todo::find(1);
-       $todo = delete();
+    $todo->delete();
 		return Redirect::route('users.show');
        
 		//$user = User::find(1);
