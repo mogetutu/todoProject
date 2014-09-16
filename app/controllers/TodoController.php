@@ -22,7 +22,6 @@ class TodoController extends \BaseController {
 	public function create()
 	{
 		return View::make('todo.create');
-
 	}
 
 
@@ -93,10 +92,5 @@ class TodoController extends \BaseController {
 		$todo = Todo::find(1);
     $todo->delete();
 		return Redirect::route('users.show');
-       
-		//$user = User::find(1);
-
 	}
-
-
 }
