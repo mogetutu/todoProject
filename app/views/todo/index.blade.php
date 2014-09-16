@@ -5,4 +5,5 @@
 
 <li> {{ $tod->task}}</li>
 @endforeach
-@stop
+@stop<ul>
+</ul>
