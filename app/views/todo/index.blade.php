@@ -1,9 +1,8 @@
 @extends('layouts.master')
 @section('content')
-
-@foreach ($todo as $tod)
-
-<li> {{ $tod->task}}</li>
-@endforeach
-@stop<ul>
+<ul>
+  @foreach ($todos as $todo)
+    <li> {{ $todo->task}}</li>
+  @endforeach
 </ul>
+@stop

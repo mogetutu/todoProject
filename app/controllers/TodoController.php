@@ -9,11 +9,8 @@ class TodoController extends \BaseController {
 	 */
 	public function index()
 	{
-		
-
-		$todo = Todo::all();
-
-		return View::make('todo.index');
+		$todos = Todo::all();
+		return View::make('todo.index', compact('todos'));
 	}
 
 
