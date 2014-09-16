@@ -19,4 +19,4 @@ Route::get('/', function()
 
 Route::resource('users', 'UsersController');
 Route::resource('todo', 'TodoController');
-Route::get('login', array('uses' => 'UserController@login'));
+Route::get('login', array('uses' => 'UsersController@login'));
