@@ -9,7 +9,11 @@ class TodoController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		
+
+		$todo = Todo::all();
+
+		return View::make('todo.index');
 	}
 
 
