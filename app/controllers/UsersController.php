@@ -9,8 +9,11 @@ class UsersController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
-		return View::make('users.index');
+		 $todo = Todo::all();
+        
+        return View::make('users.show', compact('task'));
+
+		//return View::make('users.index');
 	}
 
 
@@ -104,6 +107,12 @@ class UsersController extends \BaseController {
 	{
 		return View::make('users.update');
 	}
+
+	// public function login()
+	// {
+	// 	return View::make('users.index');
+	// }
+
 
 
 	/**
