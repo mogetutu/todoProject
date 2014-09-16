@@ -33,14 +33,16 @@ class TodoController extends \BaseController {
 	 */
 	public function store()
 	{
-		 $input = Input::all();
-			$todo = new Todo($input);
-		 
-			if ( $todo->save() )
-				return Redirect::route('users.show')->with('message', 'task created.');
-			else
-				return Redirect::route('todo.create')->withInput()->withErrors( $todo->errors() );
-			
+		$input = Input::all();
+		$todo  = new Todo($input);
+		if ($todo->save())
+		{
+			return Redirect::route('users.show')->with('message', 'task created.');
+		}
+		else
+		{
+			return Redirect::route('todo.create')->withInput()->withErrors( $todo->errors() );
+		}
 	}
 
 
